@@ -1,10 +1,11 @@
 ## Tech
 
-React
-vite
-vitest
-tailwind
-react router
+- React
+- vite
+- vitest
+- tailwind
+- react router
+- flaticon from [freepik](https://www.flaticon.com/authors/freepik)
 
 ## Needs
 
