@@ -9,7 +9,10 @@ export default defineConfig([
     plugins: { js },
     extends: ['js/recommended', pluginReact.configs.flat.recommended],
     languageOptions: { globals: globals.browser },
-    rules: { 'react/react-in-jsx-scope': 'off' },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off', // Prop types disable because a false error
+    },
     settings: {
       react: { version: 'detect' },
     },
