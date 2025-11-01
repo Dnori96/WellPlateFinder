@@ -12,6 +12,25 @@
 }
 
 @theme {
+  /* Fonts */
   --font-Primary: "Nunito", system-ui, sans-serif;
   --font-Secundary: "NunitoSans", system-ui, sans-serif;
+
+  /* Colors */
+  --color-primary-Neutral-900: #163A34;
+  --color-primary-Neutral-600: #395852;
+  --color-primary-Neutral-300: #D0DCD9;
+  --color-primary-Neutral-200: #E0E6E3;
+  --color-primary-Neutral-100: #F6F5F1;
+  --color-primary-Neutral-0: #fff;
+
+  /* Orange, Teal, Indigo */
+  --color-primary-Orange-500: #FE9F6B;
+  --color-primary-Teal-500: #49AC9B;
+  --color-primary-Indigo-500: #697DDB;
+
+}
+
+.navTitleEffect {
+  @apply opacity-100 bg-primary-Orange-500 h-[3px] rounded-full transition-opacity duration-200
 }
