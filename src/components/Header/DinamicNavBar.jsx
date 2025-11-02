@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { PageContext } from '@/context/pageContext';
 
-export default function DinamicNavBar({ onPageChange, page }) {
+export default function DinamicNavBar({ onPageChange }) {
+  const { page } = useContext(PageContext);
+
   function focusBarNav(focusPage) {
     onPageChange(focusPage);
   }
