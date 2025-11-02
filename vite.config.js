@@ -18,6 +18,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/images': path.resolve(__dirname, 'src/assets/images/'),
+      '@/components': path.resolve(__dirname, 'src/components'),
+      '@/context': path.resolve(__dirname, 'src/context'),
+      '@/lib': path.resolve(__dirname, 'src/lib'),
+      '@/pages': path.resolve(__dirname, 'src/pages'),
     },
   },
 });
