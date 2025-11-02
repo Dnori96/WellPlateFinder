@@ -1,3 +1,3 @@
 export default function Recipes() {
-  return <div>RECIPES Page</div>;
+  return <div className="flex justify-center items-center h-dvh">RECIPES Page</div>;
 }
