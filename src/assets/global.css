@@ -17,7 +17,9 @@
   --font-Secundary: "NunitoSans", system-ui, sans-serif;
 
   /* Colors */
+  --color-primary-strong-950: #293241;
   --color-primary-Neutral-900: #163A34;
+  --color-primary-Neitral-800: #395852;
   --color-primary-Neutral-600: #395852;
   --color-primary-Neutral-300: #D0DCD9;
   --color-primary-Neutral-200: #E0E6E3;
@@ -33,4 +35,51 @@
 
 .navTitleEffect {
   @apply opacity-100 bg-primary-Orange-500 h-[3px] rounded-full transition-opacity duration-200
+}
+
+.menuSettings {
+  @apply flex-col absolute p-2 rounded-lg top-16 left-1/2 -translate-x-1/2 border border-primary-Neutral-300 bg-primary-Neutral-0 w-[90%] shadow-[0_12px_22px_-12px_rgba(57,88,82,0.30)]
+}
+
+.browseButtom {
+  @apply cursor-pointer h-14 w-40 rounded-[10px] font-bold bg-primary-Neutral-900  text-primary-Neutral-0 hover:bg-primary-Neitral-800 active:bg-primary-Neutral-900 active:shadow-[0_0_0_3px_#FFF,0_0_0_5px_#163A34]
+}
+
+.flex-center {
+  @apply flex justify-center items-center
+} 
+
+  /* HOME */
+/* Responsive Desings */
+
+.hero-main-div{
+  @apply max-md:text-start max-md:items-start
+}
+.home-title {
+  @apply max-xl:text-6xl max-md:text-[52px] max-md:w-[344px] text-7xl
+}
+.home-main-text{
+  @apply max-md:w-[344px]
+}
+.main-hero {
+  @apply max-xl:max-w-full max-w-[1200px] max-md:max-w-[344px] transition-normal duration-200
+}
+.whatYoullGet-cards {
+  @apply max-xl:flex-col flex-row w-full flex
+}
+.whatYoullGet-perArticle {
+  @apply max-xl:w-full text-balance 
+}
+
+.builtForLife-section{
+  @apply max-xl:flex-col max-xl:gap-10 
+}
+.builtForLife-text{
+  @apply max-xl:max-w-[730px] max-md:max-w-[344px]
+}
+.builtForLife-img{
+  @apply max-xl:max-w-full max-md:max-w-[344px] transition-normal duration-200
+}
+.builtForLife-underline{
+  @apply max-xl:left-[570px] max-xl:top-20
 }
