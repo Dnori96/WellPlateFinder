@@ -1,11 +1,11 @@
 import App from './App';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Home from './pages/Home';
-import About from './pages/About';
-import Plate from './pages/Plate';
-import Recipes from './pages/Recipes';
-import NotFoundPage from './pages/NotFoundPage';
+import Home from '@/pages/Home';
+import About from '@/pages/About';
+import Plate from '@/pages/Plate';
+import Recipes from '@/pages/Recipes';
+import NotFoundPage from '@/pages/NotFoundPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
