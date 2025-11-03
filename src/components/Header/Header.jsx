@@ -39,18 +39,21 @@ export default function Header() {
         </Link>
       </div>
 
-      <div className="flex lg:hidden justify-between items-center relative p-4 w-full">
+      <div className="flex lg:hidden justify-between items-center relative p-[16px_30px] w-full">
         <Link>
           <img
             src={logo}
             alt="Website link logo that says Healthy Recipe Finder"
             aria-label="Link logo that goes to home"
-            className="w-[250px]"
+            className="w-[250px] max-md:w-[220px]"
             onClick={() => changeFocusPage('h')}
           />
         </Link>
         <menu>
-          <button onClick={sideMenu} className="cursor-pointer right-0">
+          <button
+            onClick={sideMenu}
+            className="flex-center cursor-pointer right-0 rounded-sm bg-primary-Neutral-300 size-10"
+          >
             <img src={menuHam} alt="Side Menu Button" />
           </button>
           <HamburgerMenu />
