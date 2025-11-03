@@ -23,7 +23,7 @@ export default function Home() {
       <section className="mt-20 mb-20 z-20">
         <div className="flex justify-center items-center max-md:items-start flex-col gap-10 mb-20">
           <div className="hero-main-div flex-center flex-col text-center gap-3 relative">
-            <div className="w-[275px] max-xl:w-[230px] max-xl:top-6 max-md:w-[200px] max-md:top-4 h-10 z-0 bg-primary-Orange-500 left-0 top-[35px] rounded-sm opacity-40 absolute"></div>
+            <div className="w-[275px] max-xl:w-[230px] max-xl:top-6 max-md:w-[200px] max-md:top-4.5 h-10 z-0 bg-primary-Orange-500 left-0 top-[35px] rounded-sm opacity-40 absolute"></div>
             <h1 className="home-title font-extrabold z-10 text-primary-Neutral-900">Healthy meals, zero fuss</h1>
             <p className="home-main-text font-Secundary text-primary-Neitral-800 font-normal text-xl w-xl">
               Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.
