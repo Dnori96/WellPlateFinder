@@ -1,33 +1,26 @@
 import initialRecipes from '@/lib/mock/data.json';
 import Plate from '@/components/Plate';
 import { useState } from 'react';
+import usePlateFilter from '../hooks/usePlateFilter';
+import MenuFilter from '../components/MenuFilter';
 
 export default function Recipes() {
   const [plates] = useState(initialRecipes);
-  const [filters, setFilters] = useState({
-    prepTime: 'all',
-    cookTime: 'all',
-  });
-  const [inputQuery, setinputQuery] = useState('');
 
-  const handleInputSearch = (perPlate) => {
-    if (!inputQuery) return perPlate;
-    const searchPlate = perPlate.title.toLowerCase();
-    const inputSearch = inputQuery.toLowerCase();
-    return searchPlate.includes(inputSearch);
-  };
+  const { filteredProducts, setinputQuery, filters, setFilters } = usePlateFilter({ plates });
 
-  const filterProducts = (plates) => {
-    return plates.filter((p) => {
-      return (
-        handleInputSearch(p) &&
-        (filters.prepTime == 'all' || p.prepMinutes == filters.prepTime) &&
-        (filters.prepTime == 'all' || p.cookMinutes == filters.cookTime)
-      );
-    });
-  };
-
-  const filteredProducts = filterProducts(plates);
+  function changePrepTime(newPrepTime) {
+    setFilters((prevState) => ({
+      ...prevState,
+      prepTime: newPrepTime,
+    }));
+  }
+  function changeCookTime(newCookTime) {
+    setFilters((prevState) => ({
+      ...prevState,
+      cookTime: newCookTime,
+    }));
+  }
 
   return (
     <main className="mx-auto flex flex-col items-center max-w-[1200px] w-full">
@@ -41,10 +34,9 @@ export default function Recipes() {
         </p>
       </section>
       <section className="w-full">
-        <search className="flex items-center justify-between w-full">
-          <div className="flex">
-            <menu>prep time</menu>
-            <menu>max cook time</menu>
+        <search className="flex items-center justify-between w-full mb-6">
+          <div className="flex gap-4">
+            <MenuFilter filters={{ filters }} onPrepTimeChange={changePrepTime} onCookTimeChange={changeCookTime} />
           </div>
           <input
             type="text"
