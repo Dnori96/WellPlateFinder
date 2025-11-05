@@ -6,6 +6,7 @@
 - tailwind
 - react router
 - flaticon from [freepik](https://www.flaticon.com/authors/freepik)
+- [react menu](https://github.com/szhsin/react-menu) 
 
 ## Needs
 
