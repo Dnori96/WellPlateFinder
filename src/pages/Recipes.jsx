@@ -1,12 +1,15 @@
-import initialRecipes from '@/lib/mock/data.json';
 import Plate from '@/components/Plate';
-import { useState } from 'react';
 import usePlateFilter from '@/hooks/usePlateFilter';
 import MenuFilter from '@/components/MenuFilter';
 import searchIcon from '@/images/icons/icon-search.svg';
+import servings from '@/images/icons/icon-servings.svg';
+import prep from '@/images/icons/icon-prep-time.svg';
+import cook from '@/images/icons/icon-cook-time.svg';
+import { useContext } from 'react';
+import { RecipesContext } from '@/context/recipesContext';
 
 export default function Recipes() {
-  const [plates] = useState(initialRecipes);
+  const { plates } = useContext(RecipesContext);
 
   const { filteredProducts, setinputQuery, filters, setFilters } = usePlateFilter({ plates });
 
@@ -62,8 +65,12 @@ export default function Recipes() {
             images={{
               imgLarge: p.image.large,
               imgSmall: p.image.small,
+              servings,
+              prep,
+              cook,
             }}
             desc={{
+              id: p.id,
               title: p.title,
               text: p.overview,
               servings: p.servings,
