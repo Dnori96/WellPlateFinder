@@ -1,8 +1,9 @@
 import initialRecipes from '@/lib/mock/data.json';
 import Plate from '@/components/Plate';
 import { useState } from 'react';
-import usePlateFilter from '../hooks/usePlateFilter';
-import MenuFilter from '../components/MenuFilter';
+import usePlateFilter from '@/hooks/usePlateFilter';
+import MenuFilter from '@/components/MenuFilter';
+import searchIcon from '@/images/icons/icon-search.svg';
 
 export default function Recipes() {
   const [plates] = useState(initialRecipes);
@@ -36,13 +37,22 @@ export default function Recipes() {
       <section className="w-full">
         <search className="flex items-center justify-between w-full mb-6">
           <div className="flex gap-4">
-            <MenuFilter filters={{ filters }} onPrepTimeChange={changePrepTime} onCookTimeChange={changeCookTime} />
+            <MenuFilter
+              times={plates}
+              filters={filters}
+              onPrepTimeChange={changePrepTime}
+              onCookTimeChange={changeCookTime}
+            />
           </div>
-          <input
-            type="text"
-            placeholder="Search by name or ingredient…"
-            onChange={(e) => setinputQuery(e.target.value)}
-          />
+          <div className="flex gap-2 max-w-[310px] w-full bg-primary-Neutral-0 p-[10px_16px] rounded-lg border border-primary-Neutral-300 group focus-within:border-primary-Neutral-900">
+            <img src={searchIcon} alt="Search icon" />
+            <input
+              type="text"
+              placeholder="Search by name or ingredient…"
+              onChange={(e) => setinputQuery(e.target.value)}
+              className="w-full outline-0 placeholder:text-primary-Neutral-900/70 text-primary-Neutral-900 font-semibold"
+            />
+          </div>
         </search>
       </section>
       <section className="flex content-start items-start self-stretch gap-9 flex-wrap">
