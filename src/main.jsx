@@ -3,11 +3,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
-import Plate from '@/pages/Plate';
 import Recipes from '@/pages/Recipes';
 import NotFoundPage from '@/pages/NotFoundPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import '@szhsin/react-menu/dist/transitions/slide.css';
+import RecipeInfo from '@/pages/RecipeInfo';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: '/about', element: <About /> },
       { path: '/recipes', element: <Recipes /> },
-      { path: '/recipe/:plateId', element: <Plate /> },
+      { path: '/recipe/:plateId', element: <RecipeInfo /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
