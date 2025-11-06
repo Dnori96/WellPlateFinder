@@ -91,9 +91,19 @@
 }
 
 .menu-radio-group {
-  @apply bg-primary-Neutral-0 w-[200px] border
+  @apply bg-primary-Neutral-0 w-[200px] border border-primary-Neutral-300 rounded-t-lg shadow-[0_12px_22px_-12px_#E0E6E3]
 }
 
 .radio-input {
-  @apply cursor-pointer p-2 
+  @apply cursor-pointer p-2 flex gap-3 items-center hover:text-primary-Neutral-900 hover:bg-primary-Neutral-200/40
+}
+
+.radio-circle {
+  @apply size-4 rounded-full border border-primary-Neutral-300 hover:border-primary-Neutral-200
+}
+.radio-circle-active {
+  @apply flex justify-center items-center size-4 rounded-full border-2 border-primary-Neutral-900 transition ease-in duration-75
+}
+.inner-circle-active{
+  @apply size-2 bg-primary-Neutral-900 rounded-full
 }
