@@ -7,7 +7,6 @@ import Plate from '@/pages/Plate';
 import Recipes from '@/pages/Recipes';
 import NotFoundPage from '@/pages/NotFoundPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 
 const router = createBrowserRouter([
