@@ -1,7 +1,7 @@
 ## WellPlateFinder
 Explore quick, healthy recipes 🥗
 
-[*Website*]()
+[*Website*](https://dnori96.github.io/WellPlateFinder/)
 
 ## Frontend Mentor Challenge
 Challenge [here](https://www.frontendmentor.io/challenges/recipe-finder-website--Ui-TZTPxN)
