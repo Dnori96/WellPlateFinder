@@ -1,5 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuRadioGroup } from '@szhsin/react-menu';
 import menuArrow from '@/images/icons/icon-chevron-down.svg';
+import { ALLFilters } from '@/hooks/usePlateFilter';
 
 export default function MenuFilter({ times, filters, onPrepTimeChange, onCookTimeChange }) {
   const sendNewPrepValue = (newTime) => {
@@ -47,7 +48,7 @@ export default function MenuFilter({ times, filters, onPrepTimeChange, onCookTim
         <MenuItem
           className="hover:bg-primary-Neutral-200 bg-primary-Neutral-0 cursor-pointer p-2 text-primary-strong-950 font-medium text-base border border-t-0 border-primary-Neutral-300 rounded-b-lg shadow-[0_12px_22px_-12px_#E0E6E3]"
           value={'all'}
-          onClick={() => sendNewPrepValue('all')}
+          onClick={() => sendNewPrepValue(ALLFilters)}
         >
           Clear
         </MenuItem>
@@ -83,17 +84,11 @@ export default function MenuFilter({ times, filters, onPrepTimeChange, onCookTim
         <MenuItem
           className="hover:bg-primary-Neutral-200 bg-primary-Neutral-0 cursor-pointer p-2 text-primary-strong-950 font-medium text-base border border-t-0 border-primary-Neutral-300 rounded-b-lg shadow-[0_12px_22px_-12px_#E0E6E3]"
           value={'all'}
-          onClick={() => sendNewCookValue('all')}
+          onClick={() => sendNewCookValue(ALLFilters)}
         >
           Clear
         </MenuItem>
       </Menu>
     </>
   );
-}
-
-{
-  /* <MenuItem className="radio-input" type="radio" value={0}>
-  <span className="radio-circle" /> 0 minutes
-</MenuItem> */
 }

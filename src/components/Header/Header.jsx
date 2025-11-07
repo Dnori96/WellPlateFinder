@@ -5,6 +5,7 @@ import DinamicNavBar from '@/components/Header/DinamicNavBar';
 import { useContext } from 'react';
 import HamburgerMenu from '@/components/Header/HamburgerMenu';
 import { PageContext } from '@/context/pageContext';
+import { pages, ROUTES_PAGES } from '@/const/pages';
 
 export default function Header() {
   const { changeFocusPage } = useContext(PageContext);
@@ -28,12 +29,12 @@ export default function Header() {
             alt="Website link logo that says Healthy Recipe Finder"
             aria-label="Link logo that goes to home"
             className="w-[250px]"
-            onClick={() => changeFocusPage('h')}
+            onClick={() => changeFocusPage(pages.HOME)}
           />
         </Link>
         <DinamicNavBar onPageChange={changeFocusPage} />
-        <Link to={'/recipes'}>
-          <button className="browseButtom" onClick={() => changeFocusPage('r')}>
+        <Link to={ROUTES_PAGES.RECIPES}>
+          <button className="browseButtom" onClick={() => changeFocusPage(pages.RECIPES)}>
             Browse recipes
           </button>
         </Link>
@@ -46,7 +47,7 @@ export default function Header() {
             alt="Website link logo that says Healthy Recipe Finder"
             aria-label="Link logo that goes to home"
             className="w-[250px] max-md:w-[220px]"
-            onClick={() => changeFocusPage('h')}
+            onClick={() => changeFocusPage(pages.HOME)}
           />
         </Link>
         <menu>

@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
+export const ALLFilters = 'all';
+
 export default function usePlateFilter({ plates }) {
   const [filters, setFilters] = useState({
-    prepTime: 'all',
-    cookTime: 'all',
+    prepTime: ALLFilters,
+    cookTime: ALLFilters,
   });
   const [inputQuery, setinputQuery] = useState('');
 
@@ -18,8 +20,8 @@ export default function usePlateFilter({ plates }) {
     return plates.filter((p) => {
       return (
         filterInputSearch(p) &&
-        (filters.prepTime == 'all' || p.prepMinutes == filters.prepTime) &&
-        (filters.cookTime == 'all' || p.cookMinutes == filters.cookTime)
+        (filters.prepTime == ALLFilters || p.prepMinutes == filters.prepTime) &&
+        (filters.cookTime == ALLFilters || p.cookMinutes == filters.cookTime)
       );
     });
   };

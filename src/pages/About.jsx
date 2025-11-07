@@ -8,6 +8,7 @@ import fork from '@/images/figures/pattern-fork.svg';
 import { useContext } from 'react';
 import { PageContext } from '@/context/pageContext';
 import { Link } from 'react-router-dom';
+import { pages, ROUTES_PAGES } from '@/const/pages';
 
 export default function About() {
   const { changeFocusPage } = useContext(PageContext);
@@ -108,8 +109,8 @@ export default function About() {
             Hit the button, pick a recipe, and get dinner on the table—fast.
           </p>
         </div>
-        <Link to={'/recipes'} className="z-10">
-          <button className="browseButtom" onClick={() => changeFocusPage('r')}>
+        <Link to={ROUTES_PAGES.RECIPES} className="z-10">
+          <button className="browseButtom" onClick={() => changeFocusPage(pages.RECIPES)}>
             Browse recipes
           </button>
         </Link>

@@ -6,7 +6,8 @@ import prep from '@/images/icons/icon-prep-time.svg';
 import cook from '@/images/icons/icon-cook-time.svg';
 import arrowBulletPoint from '@/images/icons/icon-bullet-point.svg';
 import Plate from '@/components/Plate';
-import { threeDifRecipes } from '../utils/diferentRecipes';
+import { threeDifRecipes } from '@/utils/diferentRecipes';
+import { ROUTES_PAGES } from '@/const/pages';
 
 export default function RecipeInfo() {
   const { plates } = useContext(RecipesContext);
@@ -20,7 +21,7 @@ export default function RecipeInfo() {
   return (
     <main className="flex max-w-[1200px] w-full mx-auto p-[48px_16px] flex-col">
       <search className="max-w-[350px] mb-4 text-primary-Neutral-900 whitespace-nowrap text-ellipsis overflow-hidden">
-        <Link to={'/recipes'} className="opacity-60 hover:opacity-100">
+        <Link to={ROUTES_PAGES.RECIPES} className="opacity-60 hover:opacity-100">
           Recipes /
         </Link>{' '}
         {recipe.title}

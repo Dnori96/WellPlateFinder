@@ -9,6 +9,7 @@ import fork from '@/images/figures/pattern-fork.svg';
 import { whatYoullGet } from '@/lib/whatYoullGet';
 import { useContext } from 'react';
 import { PageContext } from '@/context/pageContext';
+import { pages, ROUTES_PAGES } from '@/const/pages';
 
 export default function Home() {
   const { changeFocusPage } = useContext(PageContext);
@@ -29,8 +30,8 @@ export default function Home() {
               Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.
             </p>
           </div>
-          <Link to={'/recipes'}>
-            <button className="browseButtom" onClick={() => changeFocusPage('r')}>
+          <Link to={ROUTES_PAGES.RECIPES}>
+            <button className="browseButtom" onClick={() => changeFocusPage(pages.RECIPES)}>
               Start exploring
             </button>
           </Link>
@@ -56,7 +57,7 @@ export default function Home() {
                 className="rounded-xl size-[60px] p-2 border-primary-Neutral-200 border bg-primary-Neutral-0 shadow-[0_1px_0_0_#E9EDE8]"
               />
               <div className="flex flex-col gap-3">
-                <h5 className="text-[32px] font-bold text-primary-Neutral-900">{o.title}</h5>
+                <h3 className="text-[32px] font-bold text-primary-Neutral-900">{o.title}</h3>
                 <p className="whatYoullGet-text font-Secundary text-xl text-primary-Neitral-800">{o.text}</p>
               </div>
             </article>
@@ -100,8 +101,8 @@ export default function Home() {
             Hit the button, pick a recipe, and get dinner on the table—fast.
           </p>
         </div>
-        <Link to={'/recipes'} className="z-10">
-          <button className="browseButtom" onClick={() => changeFocusPage('r')}>
+        <Link to={ROUTES_PAGES.RECIPES} className="z-10">
+          <button className="browseButtom" onClick={() => changeFocusPage(pages.RECIPES)}>
             Browse recipes
           </button>
         </Link>

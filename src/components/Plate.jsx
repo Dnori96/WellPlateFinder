@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ROUTES_PAGES } from '@/const/pages';
 
 export default function Plate({ images, desc }) {
   return (
@@ -8,9 +9,9 @@ export default function Plate({ images, desc }) {
         <img src={images?.imgSmall} alt="Large photo of a woman cooking" className="aspect-square rounded-xl" />
       </picture>
       <div className="flex flex-col gap-2.5 self-stretch p-[0_8px]">
-        <h3 className="whitespace-nowrap text-ellipsis max-w-[320px] overflow-hidden text-primary-Neutral-900 text-xl/[28px] font-bold tracking-[-0.5px]">
+        <h2 className="whitespace-nowrap text-ellipsis max-w-[320px] overflow-hidden text-primary-Neutral-900 text-xl/[28px] font-bold tracking-[-0.5px]">
           {desc.title}
-        </h3>
+        </h2>
         <p className="text-primary-Neitral-800 self-stretch text-base/[24px] tracking-[-0.3px] font-medium">
           {desc.text}
         </p>
@@ -29,7 +30,7 @@ export default function Plate({ images, desc }) {
           {`Cook: ${desc.cookTime} ${desc.cookTime !== 1 ? 'mins' : 'min'}`}
         </span>
       </div>
-      <Link to={`/recipes/recipe/${desc.id}`}>
+      <Link to={`${ROUTES_PAGES.RECIPE_PER_ID}${desc.id}`}>
         <button className="text-base/[24px] tracking-[-0.3px] cursor-pointer font-bold hover:bg-primary-Neitral-800 bg-primary-Neutral-900 text-primary-Neutral-0 w-full p-[12px_32px] rounded-full">
           View Recipe
         </button>
