@@ -14,29 +14,29 @@ Challenge [here](https://www.frontendmentor.io/challenges/recipe-finder-website-
 - 🧰 [**React Menu**](https://szhsin.github.io/react-menu/)
 - 🧪 [**Vitest + Testing Library**](https://vitest.dev/)
 
-### Requirements
+### 🧰 Requirements
 - Node 18+ (20 recommended)
 - Package manager: npm.
 
-### Install
+### 📥 Install
 ```bash
 npm install
 ```
 
-### Scripts
+### 📜 Scripts
 ```bash
 npm run dev       # Start dev server
 npm run lint      # Lint (exclude dist if desired)
 npm test          # Run all tests (Vitest + jsdom)
 ```
 
-### Tests
+### 🧪 Tests
 - Config: `vite.config.js` (jsdom + setup file).
 - Setup: `src/__tests__/setupTests.js` (jest-dom + asset mocks).
 - Location: `src/__tests__/` (hooks, contexts, components, pages, utils).
 - Coverage (optional): `npx vitest --coverage`.
 
-### Minimal structure
+### 📦 Minimal structure
 ```
 src/
   App.jsx, main.jsx
