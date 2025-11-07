@@ -16,5 +16,6 @@ export default defineConfig([
     settings: {
       react: { version: 'detect' },
     },
+    ignores: ['dist/**'],
   },
 ]);
