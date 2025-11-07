@@ -2,17 +2,13 @@ import { Link } from 'react-router-dom';
 
 export default function Plate({ images, desc }) {
   return (
-    <article className="max-w-[376px] p-2 flex flex-col gap-4 rounded-[10px] border border-primary-Neutral-300 bg-primary-Neutral-0 shadow-[0_8px_16px_-9px_rgba(22,58,52,0.16)]">
-      <picture className="">
+    <article className="max-w-full md:max-w-full xl:max-w-[376px] p-2 flex flex-col gap-4 rounded-[10px] border border-primary-Neutral-300 bg-primary-Neutral-0 shadow-[0_8px_16px_-9px_rgba(22,58,52,0.16)]">
+      <picture>
         <source media="(min-width: 768px)" srcSet={images?.imgLarge} />
-        <img
-          src={images?.imgSmall}
-          alt="Large photo of a woman cooking"
-          className="shrink-0 aspect-square rounded-xl"
-        />
+        <img src={images?.imgSmall} alt="Large photo of a woman cooking" className="aspect-square rounded-xl" />
       </picture>
       <div className="flex flex-col gap-2.5 self-stretch p-[0_8px]">
-        <h3 className="whitespace-nowrap text-ellipsis overflow-hidden w-full text-primary-Neutral-900 text-xl/[28px] font-bold tracking-[-0.5px]">
+        <h3 className="whitespace-nowrap text-ellipsis max-w-[320px] overflow-hidden text-primary-Neutral-900 text-xl/[28px] font-bold tracking-[-0.5px]">
           {desc.title}
         </h3>
         <p className="text-primary-Neitral-800 self-stretch text-base/[24px] tracking-[-0.3px] font-medium">

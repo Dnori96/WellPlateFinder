@@ -13,9 +13,7 @@ export default function RecipeInfo() {
   const { plateId } = useParams();
 
   const threeRecipes = threeDifRecipes(plateId, plates.length);
-  const recipesSelected = plates.filter((r) => r.includes(...threeRecipes));
-
-  console.log(recipesSelected);
+  const recipesSelected = plates.filter((r) => threeRecipes.includes(r.id));
 
   const recipeFilterPerId = plates.filter((r) => r.id === Number(plateId));
   const recipe = recipeFilterPerId[0]; // probably there is a method that do this but OK :)
@@ -27,22 +25,22 @@ export default function RecipeInfo() {
         </Link>{' '}
         {recipe.title}
       </search>
-      <section className="flex flex-col gap-10">
+      <section className="flex flex-col gap-10 pb-12 xl:flex-row">
         <picture>
           <source media="(min-width: 768px)" srcSet={`/${recipe.image?.large}`} />
           <img
             src={`/${recipe.image?.small}`}
             alt="Large photo of a woman cooking"
-            className="max-w-[343px] rounded-[10px]"
+            className="max-w-[343px] md:max-w-full xl:max-w-[580px] transition duration-100 rounded-[10px]"
           />
         </picture>
         <div className="flex flex-col gap-5 text-primary-Neutral-900">
-          <h1 className="text-[40px]/[48px] tracking-[-2px] font-extrabold">{recipe.title}</h1>
+          <h1 className="text-[40px]/[48px] xl:text-5xl/[57.6px] tracking-[-2px] font-extrabold">{recipe.title}</h1>
           <p className="text-primary-Neitral-800 text-xl/[30px] tracking-[-0.4px] font-Secundary font-medium">
             {recipe.overview}
           </p>
           <div>
-            <div className="flex flex-wrap self-stretch items-center content-center p-[0_8px] gap-[8px_16px] cursor-default">
+            <div className="flex flex-wrap self-stretch items-center content-center p-[0_8px] md:p-0 gap-[8px_16px] cursor-default">
               <span className="flex text-base/[24px] tracking-[-0.3px] font-medium">
                 <img src={servings} alt="Total Servings of the recipe" className="size-5" />
                 {`Servings: ${recipe.servings}`}
@@ -87,9 +85,33 @@ export default function RecipeInfo() {
           </div>
         </div>
       </section>
-      <section>
-        <h2>More recipes</h2>
-        <div>{}</div>
+
+      <div className="w-full h-px bg-primary-Neutral-200"></div>
+
+      <section className="flex flex-col pt-12 gap-6">
+        <h2 className="text-[32px]/[41.6px] tracking-[-1px] font-bold">More recipes</h2>
+        <div className="flex justify-between flex-wrap gap-8 xl:gap-0">
+          {recipesSelected.map((p) => (
+            <Plate
+              key={p.id}
+              images={{
+                imgLarge: `/${p.image.large}`,
+                imgSmall: `/${p.image.small}`,
+                servings,
+                prep,
+                cook,
+              }}
+              desc={{
+                id: p.id,
+                title: p.title,
+                text: p.overview,
+                servings: p.servings,
+                prepTime: p.prepMinutes,
+                cookTime: p.cookMinutes,
+              }}
+            />
+          ))}
+        </div>
       </section>
     </main>
   );

@@ -87,11 +87,11 @@
 /* Menu Items Styles */
 
 .menu-buttom {
-  @apply flex justify-center cursor-pointer w-[200px] hover:border-primary-Neutral-900 text-primary-Neutral-900 font-semibold text-lg items-center bg-primary-Neutral-0 p-[10px_16px] border border-primary-Neutral-300 rounded-[10px] gap-2
+  @apply flex justify-center cursor-pointer max-w-[200px] max-md:max-w-full hover:border-primary-Neutral-900 text-primary-Neutral-900 font-semibold text-lg items-center bg-primary-Neutral-0 p-[10px_16px] border border-primary-Neutral-300 rounded-[10px] gap-2
 }
 
 .menu-radio-group {
-  @apply bg-primary-Neutral-0 w-[200px] border border-primary-Neutral-300 rounded-t-lg shadow-[0_12px_22px_-12px_#E0E6E3]
+  @apply bg-primary-Neutral-0 w-[200px] max-md:w-[250px] border border-primary-Neutral-300 rounded-t-lg shadow-[0_12px_22px_-12px_#E0E6E3]
 }
 
 .radio-input {
