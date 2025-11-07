@@ -1,7 +1,7 @@
-## WellPlateFinder
-Explore quick, healthy recipes 🥗
+## WellPlateFinder 🥗
+Explore quick, healthy recipes.
 
-[*Website*](https://dnori96.github.io/WellPlateFinder/)
+[*Website*](https://well-plate-finder.vercel.app/)
 
 ## Frontend Mentor Challenge
 Challenge [here](https://www.frontendmentor.io/challenges/recipe-finder-website--Ui-TZTPxN)
