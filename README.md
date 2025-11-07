@@ -3,11 +3,16 @@ Explore quick, healthy recipes.
 
 [*Website*](https://well-plate-finder.vercel.app/)
 
-## Frontend Mentor Challenge
+### Frontend Mentor Challenge
 Challenge [here](https://www.frontendmentor.io/challenges/recipe-finder-website--Ui-TZTPxN)
 
 ### Tech
-React 19 · Vite 7 · React Router 7 · Tailwind v4 · React Menu · Vitest + Testing Library · ESLint + Prettier
+- 🥶 [**React**](https://react.dev/)
+- ⚡ [**Vite**](https://vite.dev/)
+- 🔌 [**React Router 7**](https://reactrouter.com/)
+- 🖌 [**Tailwind CSS**](https://tailwindcss.com/)
+- 🧰 [**React Menu**](https://szhsin.github.io/react-menu/)
+- 🧪 [**Vitest + Testing Library**](https://vitest.dev/)
 
 ### Requirements
 - Node 18+ (20 recommended)
@@ -21,8 +26,6 @@ npm install
 ### Scripts
 ```bash
 npm run dev       # Start dev server
-npm run build     # Production build in dist/
-npm run preview   # Serve the production build
 npm run lint      # Lint (exclude dist if desired)
 npm test          # Run all tests (Vitest + jsdom)
 ```
